@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        div{ /* it is Elenemt Selector */
+            color:white;
+            background-color: black;
+        }
+        .yellow{ /* Class Selector */
+            color: yellow;
+        }
+        #aqua{ /* Id selector */
+            color:aqua;
+        }
+        div>p{ /* Child Selector(it is use when p-tag is present in div-tag. and p-tag is direct child of div-tag)*/
+            color:orange;
+        }
+        span h3{ /* Descendent Selector(it is use when h3-tag is present in any where of div-tag.) */
+            color:white;
+            background-color:aqua;
+        }
+        *{ /* Universal Selector(it is use to style all html) */
+            margin:10px;
+            padding: 0px;
+        }
+        a:hover{ /* Pseudo Selector */
+            color: yellow;
+            background-color: black;
+        }
+        footer p:first-child{ /* Pseudo Selector */
+            background-color: blue;
+            color:white;
+        }
+        footer p:nth-child(3){ /* Pseudo Selector */
+            color:blue;
+        }
+        [data-x=o]{ /* Attribute Selector */
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>this is div-tag 1</div>
+        <div class="yellow">this is div-tag 2, with yellow class</div>
+        <div id="aqua">this is div-tag 2, with aqua id</div>
+        <p>this is paragraph whith child selector</p>
+    </div>
+    <p>This another paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur possimus laudantium eum sequi error? Non aut blanditiis odio in tempore id tempora. Molestiae repellat dignissimos possimus ut corrupti quod vitae, tempore cumque ratione esse debitis maiores voluptatum harum incidunt perspiciatis quos error voluptas nemo voluptates recusandae. Deleniti tempore repellendus accusamus.</p>
+    <span>
+        <div>
+            <h3>This is a heading with decendent selector</h3>
+        </div>
+    </span>
+    <a href="https://www.youtube.com" target="_blank">clock to open youtube</a>
+    <footer>
+        <p>I anm first child para.</p>
+        <p>I am another para</p>
+        <p>I am also another para(no3)</p>
+        <p>I am also another para(no4)</p>
+        <p>I am also another para(no5)</p>
+    </footer>
+    <p data-x="o">This para show Attribute Selector</p>
+</body>
+</html>

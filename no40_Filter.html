@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Filter</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 5vw;
+            column-gap: 5vh;
+            justify-items: center;
+            align-items: center;
+        }
+        .allImg{
+            width: 20vw; height: 40vh; object-fit:fill;
+        }
+        .img1{
+            filter: blur(1.5px);
+        }
+        .img2{
+            filter: contrast(200%);
+        }
+        .img3{
+            filter: brightness(120%);
+        }
+        .img4{
+            filter: grayscale(100%);
+        }
+        .img5{
+            filter: invert(1);
+        }
+        .img6{
+            filter: opacity(0.5);
+        }
+        .img7{
+            filter: drop-shadow(1px 1px 25px black);
+        }
+        .img8{
+            filter: hue-rotate(45deg);
+        }
+        .shortHand{
+            filter: blur(0.5px) contrast(200%) brightness(100%) grayscale(40%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div> blur : <img class="allImg img1" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="image"> </div>
+        <div> contrast : <img class="allImg img2" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="image"> </div>
+        <div> brightness : <img class="allImg img3" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="image"> </div>
+        <div> grayscale : <img class="allImg img4" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="image"> </div>
+        <div> invert : <img class="allImg img5" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="image"> </div>
+        <div> opacity : <img class="allImg img6" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="image"> </div>
+        <div> blur : <img class="allImg img7" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="image"> </div>
+        <div> blur : <img class="allImg img8" src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg" alt="image"> </div>
+    </div>
+    <div>
+        <h4>Short-Hand : </h4>
+        <img class="shortHand" src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg" alt="image">
+    </div>
+</body>
+</html>

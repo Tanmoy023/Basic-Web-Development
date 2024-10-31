@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try, Catch and Error Handeling</title>
+</head>
+<body>
+    <h2>Try, Catch and Error Handeling</h2>
+    <script>
+        let a = prompt("Enter the First number : ")
+        let b = prompt("Enter the second number : ")
+        if( isNaN(a) || isNaN(b)){
+            throw SyntaxError("Sorry only number's are allow")
+        }
+        let c = parseInt(a) + parseInt(b);
+        console.log(`Sum of ${a} and ${b} is : ${c} `);
+        try{ // try is use to check some block of code, those are throw some error's or not. you need to use catch while you use try.
+            console.log(`c * x is : ${c*x}`);
+        }
+        catch(e){ // catch is use to show some custom error to user(those error is dose't terminate your program). Without try you don't able to use catch
+            console.log(`Define the x first you BOCACHODA`);
+        }
+        finally{
+            console.log(`your try and catch is successfully executed and this is finally`); // finally always user after try and catch. This thing dose't follow any condition and after execution of try and catch it will be run.
+        }
+            
+        function main(){
+            try{
+                console.log(`My name is : ${Name}`);
+                return true
+            }
+            catch(e){
+                console.log(`Define the Name first`);
+                return false
+            }
+            finally{
+                console.log(`your try and catch is successfully executed in main()`); // Mostly finally is use in function which will be run even after return any function value.
+            }
+            console.log("Good bye"); // This thing will not run after return the function value
+        }
+        main();
+    </script>
+</body>
+</html>

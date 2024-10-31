@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Object in js</title>
+</head>
+<body>
+    <div class="container">
+        welcome user
+    </div>
+    <script>
+        /*
+        let obj = {
+            a : 1,
+            b : "name"
+        }
+        console.log(obj);
+        let animal = {
+            eat : true
+        }
+        let rabbit = {
+            jump : true
+        }
+        rabbit.__proto__ = animal // set rabbit[[prototype]] = animal
+        */
+
+        class Animal {
+            // constructor(){ // constructor without argument. constructor will run when his class object is called.
+            //     console.log("Object is created");
+            // }
+
+            constructor(name){ // constructor with argument. Only one constructor is present in a class
+                this.name = name // in 'this.name', 'this' represent his class object and 'name' represent a  property for this object. And in ' = name' it the argument of this constructor.
+                console.log("Object is created with argument. and animal name is : "+name);
+            }
+            eat(){
+                console.log("Able to eat");
+            }
+            jump(){
+                console.log("Able to jump");
+            }
+        }
+
+        class lion extends Animal{
+            constructor(name){
+                super(name); // to use another same constructor in extended class you need to call his parent calass constructor using 'super' keyword. argument in super is needed it parent constructor is also contain any argument.
+                console.log("Hii i am constructor form lion class. and lion name is "+name);
+            }
+            eat(){ // change a method in extended class is called Method Overriding
+                super.eat(); // call his parent class eat() method 
+                console.log("Able to eat. but just for i am a lion i am not a vegetarian");
+            }
+
+        }
+
+        // let c = new Animal(); // c is a object of class Animal
+        // console.log(c);
+        // c.eat();
+        // c.jump();
+
+        let d = new Animal("Tommy")
+        console.log(d.name);
+
+        let l = new lion("Bubban Sher")
+        console.log(l.name);
+        l.eat();
+
+        console.log("l is objecto of lion : "+(l instanceof lion));
+        console.log("l is objecto of Animal : "+(l instanceof Animal));
+        console.log("d is objecto of lion : "+(d instanceof lion));
+
+        class User{
+            constructor(name) {
+            // invokes the setter
+            this.name = name;
+            }
+            get name() { // getter method
+                return this._name;
+            }
+            set name(value) { // setter method
+                this._name = value;
+            }
+        }
+        let ur = new User("john")
+        console.log(ur.name);
+        ur.name = "Tanmoy"
+        console.log(ur.name);
+    </script>
+</body>
+</html>

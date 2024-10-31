@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing unit in Css</title>
+    <style>
+        html{ /* in css 'html' is root element*/
+            font-size: 18px; /*default font size is 16px*/
+        }
+        *{
+            padding:0px;
+            margin:5px 0px;
+            box-sizing: border-box;
+        }
+        .border{
+            border:5px solid black;
+        }
+        #px{
+            width: 500px;
+        }
+        #vw{
+            width: 90vw; /* vw stand for viewport width(100vw = 100% display width) */
+        }
+        #vh{
+
+            height: 10vh; /* vh stand for viewport height(100vh = 100% display height) */
+        }
+        #em{
+            font-size: 2em; /* 2em = 2*(its actual font size) */
+        }
+        #rem{
+            font-size: 3rem; /* 3rem = 3*(its root font size) */
+        }
+        #min-height{
+            min-height: 40vh; /* it grab atleast minimum 40vh of height. and in any case it requred more heighyt so it expand according to requrement  */
+        }
+        #percentage{
+            width: 50%; /* it mean it take 50% of width: of his parent */
+        }
+        div{
+            width: 98vw;
+        }
+    </style>
+</head>
+<body>
+    <p id="px" class="border">This is for showing 'px' unit</p>
+    <p id="vw" class="border">This is for showing 'vw' unit</p>
+    <p id="vh" class="border">This is for showing 'vh' unit</p>
+    <p id="em" class="border">This is for showing 'em' unit</p>
+    <p id="rem" class="border">This is for showing 'rem' unit</p>
+    <p id="min-height" class="border">This is for showing min-height</p>
+    <div class="border">
+        <div id="percentage" class="border">This is for showing '%' unit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quam tempora necessitatibus, et libero beatae tempore, voluptatem voluptatum tenetur amet alias? Fugit, necessitatibus? Molestias eius veritatis culpa dolores deleniti. Labore veniam beatae cum. Tempore eum delectus similique. Nesciunt veniam debitis, recusandae neque officia aliquid? A facilis, enim iusto quod, porro velit numquam maxime quaerat quo, beatae inventore esse. Omnis reiciendis quaerat ad itaque voluptate perspiciatis quas, nihil quisquam veniam delectus et tenetur fugit neque eius alias placeat consequuntur rerum corrupti minus iste. Quae animi inventore illum expedita eos adipisci cumque in cum numquam nobis fuga quibusdam tempore eligendi, impedit minima exercitationem vero doloribus nostrum hic porro voluptatum dolorum consequuntur non maiores? Necessitatibus vero consequatur eaque ullam deleniti. Quasi tenetur quam maxime velit dolore.
+            <div id="percentage" class="border">This is for showing '%' unit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, quam tempora necessitatibus, et libero beatae tempore, voluptatem voluptatum tenetur amet alias? Fugit, necessitatibus? Molestias eius t teneos adipisci cumque in cum numquam nobis fuga quibusdam tempore eligendi, impedit minima exercitationem vero doloribus nostrum hic porro voluptatum dolorum consequuntur non maiores? Necessitatibus vero consequatur eaque ullam deleniti. Quasi tenetur quam maxime velit dolore.</div>
+        </div>
+    </div>
+</body>
+</html>

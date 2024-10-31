@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Margin Padding Border</title>
+    <style>
+        .box{
+            background-color:aqua;
+            height: 100px;
+            width: 100px;
+        }
+        .box1{ /* Margin Padding and Border mosty used in that way  */
+            margin:10px;
+            border: 5px solid black;
+            padding: 5px;
+            box-sizing: border-box; /* it say height = border + padding */
+        }
+        
+        .box2{
+            background-color:green;
+            border:5px solid black;
+            /* We can set margin/padding for individual top, right, bottom and left like this */
+            margin-top: 100px;
+            margin-right: 200px;
+            margin-bottom: 100px; 
+            margin-left: 200px;
+
+            padding-top: 100px;
+            padding-right: 200px;
+            padding-bottom: 100px; 
+            padding-left: 200px;
+        }
+        .box3{
+            background-color:blue;
+            border:5px solid black;
+            /* margin/padding = top right bottom left; */
+            margin: 200px 100px 200px 100px;
+            padding: 200px 100px 20px 100px;
+        }
+        .box4{
+            border:5px dotted black;
+            /* border style can be in solid/dotted/dashed */
+            border-radius: 25px;
+        }
+        .box5{
+            background-color: #fff;
+            height: 300px;
+            width: 300px;
+            /* We can set border for individual border-top, border-right, border-bottom and border-left */
+            border-top: 25px solid rgb(231, 22, 231);
+            border-right: 25px solid rgb(18, 10, 133);
+            border-bottom: 25px solid rgba(9, 144, 27, 0.774);
+            border-left: 25px solid rgb(156, 42, 13);
+
+            /* We can set border radius for individual border-top-left-radius, border-top-right-radius, border-bottom-left-radius and border-bottom-right-radius */
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">It is box1</div>
+    <div class="box box2">It is box2</div>
+    <div class="box box3">It is box3</div>
+    <div class="box box4">It is box4</div>
+    <br>
+    <div class="box box5">It is box5</div>
+</body>
+</html>

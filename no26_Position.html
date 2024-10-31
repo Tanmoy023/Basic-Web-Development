@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property in CSS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .parent-box{
+            border: 2px solid brown;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+        }
+        .box{
+            height: 100px;
+            width: 60vw;
+            padding: 3px;
+            margin: 3px;
+            border:2px solid black;
+        }
+        
+        #v-line{
+            margin: 20px;
+            margin-left: 45vw;
+            border: 10px solid black;
+            height: 200vh;
+            width: 50px;
+        }
+
+        .box1{
+            background-color: brown;
+            position: sticky; /* for this declearation box-1 is stil hold his space.And move according to his original position. And stick in his given display position(stick mean untill he touch the border of his parent he still say in same position and ignore scroll ud/down)*/
+            top: 0px;
+            z-index: 2;
+        }
+        .box2{
+            background-color:aqua;
+            position:relative; /* for this declearation box-2 is stil hold his space. And move according to his original  position  */
+            z-index: 1;
+        }
+        .box3{
+            background-color:antiquewhite;
+            position: relative;
+            top: -40px;
+            left: 40px;
+        }
+        .box4{
+            background-color: yellow;
+            position:absolute; /* for this declearation box-4 is free his space to other. And move according to his parent position element*/
+            bottom: 0px;
+            right: 0px;
+        }
+        .box5{
+            background-color: purple;
+            position: fixed; /* for this declearation box-5 is free his space for other. And move according to display/screen. And it will fixed at that positon mean, scrol-up/down dose't make any changes in his positon, it aloways stay constant in his positon; */
+            bottom: 0px;
+            left:273px;
+            height: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent-box">
+        <div class="box box1">This is box 1</div>
+        <div class="box box2">This is box 2</div>
+        <div class="box box3">This is box 3</div>
+        <div class="box box4">This is box 4</div>
+        <div class="box box5">This is box 5</div>
+    </div>
+    <div id="v-line">vertical line for scrol-up & scrol-down</div>
+</body>
+</html>

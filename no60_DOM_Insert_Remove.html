@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM for Inser and Remove</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>-----------------------------------------------------------------------------------------------</div>
+    <div class="container class1 c2 c3 red">
+        <div class="box box1">I am box</div>
+        <div class="box box2" data-creator="Tanmoy">I am second box</div>
+        <div class="box box3" style="display: flex;">I am third box</div>
+        <div class="box box4">I am fourth box</div>
+    </div>
+    <div>-----------------------------------------------------------------------------------------------</div>
+    <script>
+        let box = document.querySelector(".box");
+        let b2 = document.querySelector(".box2");
+        let b3 = document.querySelector(".box3");
+        let con = document.querySelector(".container");
+        console.log(con.innerHTML);
+        console.log(con.outerHTML);
+        console.log(con.innerText);  // also you can do it with con.textContent
+        console.log(con.tagName);
+        console.log(b2.hidden);
+        b2.hidden = true; // it hide this b2 and free his space
+        console.log(b2.dataset);
+        b3.innerHTML = "Now i am change by .innerHTML"
+        console.log(b3.attributes);
+        console.log(b3.hasAttribute("style"));
+        console.log(b3.getAttribute("style"));
+        console.log(b3.setAttribute("style","color: red"));
+        b3.removeAttribute("style");
+        // document.designMode = "on"; // you can freely change any website in his home page
+
+        let d = document.createElement("div");
+        d.innerHTML = "i am created by <b>Tanmoy Patra</b>";
+        d.setAttribute("class","created");
+        document.querySelector(".container").append(d); // add after in .container
+        // document.querySelector(".container").prepend(d); // add first in .container
+        // document.querySelector(".container").before(d); // add before of .container
+        // document.querySelector(".container").after(d); // add after of .container
+        // document.querySelector(".container").replaceWith(d); // raplace hole .container
+
+        con.insertAdjacentHTML("beforebegin","i am created bt <b>insertAdjacentHTML</b>(beforebegin)"); // insert before of .container
+        // con.insertAdjacentHTML("afterbegin","i am created bt <b>insertAdjacentHTML</b>(afterbegin)"); // insert before in .container
+        // con.insertAdjacentHTML("beforeend","i am created bt <b>insertAdjacentHTML</b>(beforeend)"); // insert end in .container
+        // con.insertAdjacentHTML("afterend","i am created bt <b>insertAdjacentHTML</b>(afterend)"); // insert end of .container
+
+        let b4 = document.querySelector(".box4");
+        b4.remove();
+
+        console.log(con.className);
+        console.log(con.classList);
+        con.classList.add("Harry"); // add one class name "Harry" in .container
+        con.classList.remove("c2"); // remove "c2" class form container
+        con.classList.toggle("red"); // toggle the class "red" means, if class "red" is present in class .container so remove this otherwise if class "red" is not present in class .container so add this
+    </script>
+</body>
+</html>

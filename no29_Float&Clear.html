@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear in CSS</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root; /* use to solve overflow problem in case when you use float property */
+        }
+        .cards>img{
+            float: right;
+        }
+        .card{
+            border: 2px solid red;
+            margin: 2px;
+        }
+        .card:nth-child(4){
+            background-color: azure;
+            clear: right; /* it dose not allow any float property in his right side. clear: left/right/both */
+        }
+    </style>
+</head>
+<body>
+    <h2>In present time don't use the 'float and clear' just know for knowledge perpose. And Insted of use this you must use 'flex box' property.</h2>
+    <div class="cards">
+        <img src="/images/Dragon Ball.png" width=250px >
+        <div class="card">[ It is card 1 ] Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, omnis?ratione facilis sequi delectus qui exercitationem cum sunt autem explicabo reiciendis, beatae incidunt rerum unde debitis ab minima?</div>
+        <div class="card">[ It is card 2 ] Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, suscipit? Cumque commodi sapiente quidem, sint minus quam quos obcaecati harum. Dolorem ad aperiam, cum enim quam suscipit nulla dolores iusto molestiae, quis minima fuga. Quibusdam, voluptatem eius! Eum eos consequatur ipsam magnam soluta eaque animi, quisquam, recusandae, porro dolorem nihil. Quod repudiandae eum tenetur reprehenderit, ratione doloribus nesciunt magnam perspiciatis quos repellendus nostrum maiores quaerat delectus sit illo deserunt. Voluptatibus reiciendis maiores optio dolorem consequatur incidunt architecto accusantium, sequi eius nisi quis, illum voluptate velit. Cum nemo vero, hic praesentium rem porro commodi fugit dicta iste, vel incidunt! In, voluptatibus.</div>
+        <div class="card">[ It is card 3 ] Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, suscipit? Cumque commodi sapiente quidem, sint minus quam quos obcaecati harum. Dolorem ad aperiam, cum enim quam suscipit nulla dolores iusto molestiae, quis minima fuga. Quibusdam, voluptatem eius! Eum eos consequatur ipsam magnam soluta eaque animi, quisquam, recusandae, porro dolorem nihil. Quod repudiandae eum tenetur reprehenderit, ratione doloribus nesciunt magnam perspiciatis quos repellendus nostrum maiores quaerat delectus sit illo deserunt. Voluptatibus reiciendis maiores optio dolorem consequatur incidunt architecto accusantium, sequi eius nisi quis, illum voluptate velit. Cum nemo vero, hic praesentium rem porro commodi fugit dicta iste, vel incidunt! In, voluptatibus.</div>
+    </div>
+</body>
+</html>

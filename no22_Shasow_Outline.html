@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outline in css</title>
+    <style>
+        .box{
+            border:2px solid black;
+            margin:10px;
+            padding:15px;
+            box-shadow: 5px 5px 15px 5px gray ; /* box-shadow: horizontal-offset vertical-offset blur spread color; */
+        }
+        h1{
+            text-shadow: 3px 4px 7px black; /* text-shadow: h-offset v-offset blur color; */
+        }
+        p{
+            outline: 2px solid red;
+            outline-offset: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Box for Shadows
+    </div>
+    <h1>heading for Shadows.</h1>
+    <p> text for outline </p>
+</body>
+</html>

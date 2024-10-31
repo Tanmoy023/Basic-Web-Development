@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance js</title>
+</head>
+<body>
+    <div class="container">
+        <h2>It is about Advance JavaScript</h2>
+    </div>
+    <script>
+        async function sleep(){
+            return new Promise((resolve,reject) => {
+                setTimeout(() => {
+                    resolve(45)
+                },1000)
+            })
+        }
+
+        function sum(a, b, c){
+            return a+b+c
+        }
+
+        (async function main() { // it's called IIFE(Immediately Invoke Function Expression)
+            console.log(d); // just for d is define in the bottom of this function with var. Just for it is available for every where of this function. but you only access his value after his actual declaration. This concept is known as hosting in js
+
+            // let a = await sleep();
+            // let b = await sleep();
+            // console.log(a);
+            // console.log(b);
+
+            // let [x,y] = [1,2]
+            // console.log(x,y);
+            // let [m, n, ...rest] = [10, 20, 30, 40, 50, 100]
+            // console.log(m, n, rest);
+
+            // let obj = {
+            //     a: 1,
+            //     b: 2,
+            //     c: 3
+            // }
+            // let {a, b} = obj
+            // console.log(a, b);
+
+            let arr = [1, 2, 3, 4, 5,]
+            console.log(sum(...arr));
+
+            var d = 10;
+        })()
+    </script>
+</body>
+</html>

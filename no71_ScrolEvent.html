@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollBy() and ScrollTo</title>
+    <style>
+        .horizontal {
+            height: 0vh;
+            width: 200vw;
+            border: 2px solid red;
+        }
+        .vertical {
+            height: 200vh;
+            width: 0vw;
+            border: 2px solid black;
+        }
+        .scroll{
+            position: fixed;
+            bottom: 50px;
+            left: 50px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="horizontal"></div>
+        <div class="vertical"></div>
+        <button class="scroll" onclick="Scroll()">click.</button> <!-- onclick active when it is clicked. and called curresponding function -->
+    </div>
+    <script>
+        function Scroll() {
+            // window.scrollBy(0, 50) // window.scrollBy(x,y)
+            // window.scrollBy(50, 0)
+
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

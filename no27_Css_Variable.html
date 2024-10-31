@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variable</title>
+    <style>
+        :root{
+            --FirstColor: rgb(68, 68, 185); /* it is a global variable */
+            --SecondColor: rgb(86, 152, 250);
+            --defPadding: 10px;
+            --defOpacity: 0.5;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        li{
+            display: inline;
+            margin:10px;
+            padding:2px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .navbar{
+            background-color:var(--FirstColor);
+            padding: var(--navPadding);
+        }
+        .para{
+            background-color:var(--SecondColor);
+        }
+        .para2{
+            --FirstColor: rgb(140, 174, 226); /* it is a local variable */
+            background-color: var(--FirstColor);
+        }
+        .para3{
+            background-color: var(--ThirdColor,aqua); /*if any variable is not decleare so you can use a another backup color*/
+            opacity: var(--defOpacity);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>About us.</li>
+            <li>Contact us.</li>
+        </ul>
+    </nav>
+    <div>
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ullam qui veritatis aut quam quibusdam delectus? Sit dolorem voluptatibus incidunt nihil ipsam beatae minus impedit voluptate, asperiores illum pariatur, libero, est corporis excepturi? Unde omnis magni, accusantium ex blanditiis minus ab eligendi possimus maiores deserunt eius amet velit dignissimos error!
+        </p>
+        <p class="para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, ab cupiditate qui repudiandae officiis, culpa amet nobis ad repellendus omnis enim, quos voluptates porro! Repellat, et laudantium facilis nemo velit at a accusantium deserunt nisi quis maiores consectetur voluptatibus mollitia!
+        </p>
+        <p class="para3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis ullam delectus esse ipsum dolorem sit, voluptates velit, dicta beatae in commodi odio nostrum! Dolorem iste velit unde labore recusandae.
+        </p>
+    </div>
+</body>
+</html>

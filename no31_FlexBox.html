@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box in Css</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            border: 2px solid black;
+            display: flex;/* by default all item are aling from left to right. and by default for overflow problem it change the height and width */
+            height: 50vh;
+            justify-content: center; /* it center the items horizontaly ( -- ) */
+            align-items: center; /* it center the items verticaly ( | ) */
+            /* there are many usefull option in justify-content and align-items. like - center, flex-end, flex-start, self-end, self-start, left, right, space-around, space-between, space-evenly etc. but 70% of the time you will use 'center' */
+            /* align-content: center; */
+            flex-direction: column;
+            flex-wrap: wrap; /* if overflow problem is present Soo, it will wrap it in container without changing height and width */
+            gap: 20px;
+            /* row-gap: 20px;
+            column-gap: 20px;
+            gap: row-gap column-gap; */
+        }
+        .item{
+            height: 50px;
+            width: 50px; 
+            border: 2px solid black;
+            margin: 10px;
+            background-color: blueviolet;
+        }
+        .container2{
+            border: 2px solid black;
+            display: flex;
+            flex-direction:row;
+            height: 50vh;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .item2{
+            height: 50px;
+            width: 50px; 
+            border: 2px solid red;
+            margin: 10px;
+            background-color: aqua;
+        }
+        .order-0{ order: 10} .order-1{ order: 9; } .order-2{ order: 8; } .order-3{ order: 7; } .order-4{ order: 6; } /*(it dose't use too much in mordarn web development) lower order have high priority. with our order is have higher priority */
+        .order-5{ flex-grow: 2; } /* ? */
+        .order-6{ flex-shrink: 2; } /* ? */
+        .order-7{ align-self: flex-end; } /* flex-end give lowest priority */
+        .order-8{ align-self: flex-start; } /* flex-start give highest priority */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item-0</div>
+        <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+        <div class="item">Item-5</div>
+        <div class="item">Item-6</div>
+        <div class="item">Item-7</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-9</div>
+    </div>
+    <div class="container2">
+        <div class="item2 order-0">Item-0</div>
+        <div class="item2 order-1">Item-1</div>
+        <div class="item2 order-2">Item-2</div>
+        <div class="item2 order-3">Item-3</div>
+        <div class="item2 order-4">Item-4</div>
+        <div class="item2 order-5">Item-5</div>
+        <div class="item2 order-6">Item-6</div>
+        <div class="item2 order-7">Item-7</div>
+        <div class="item2 order-8">Item-8</div>
+        <div class="item2 order-9">Item-9</div>
+    </div>
+</body>
+</html>

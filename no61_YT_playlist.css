@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.box{
+    margin:4px 0px;
+    width: 100vw;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 3fr 10fr 70fr 8fr;grid-template-rows: 75px;
+}
+a{
+    text-decoration: none;
+    color: white
+}
+.sl-no{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thumbnail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.thumbnail img{
+    height: 70px;
+    border-radius: 5px;;
+}
+.thumbnail p{
+    background-color: black;
+    padding: 0px 3px;
+    border-radius: 3px;
+    z-index: 10;
+    position: absolute;
+    bottom: 5px;
+    right: 3px;
+}
+.containt{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    margin-left: 10px;
+}
+.info {
+    color:gray;
+    font-size: 10px;
+    line-height: 0px;
+}
+.ThreeDot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ThreeDot svg{
+    height: 20px;
+    width: 20px;
+    transform: rotate(90deg);
+    fill: black;
+}
+.ThreeDot:hover{
+    svg{
+        fill:gray;
+    }
+}

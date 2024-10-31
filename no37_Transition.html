@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition in CSS</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 80vw;
+            background-color: aqua;
+        }
+        .box{
+            background-color: red;
+            width: 10vw;
+            height: 10vh;
+            /* To use transition you need one more extra class/id where all transition-property is present. If any time this extra class/id is missing so it become's to his original property. Or if his any one/more property is missing so it change only those property's and come into the previous state. */
+            /* transition-property: transform, background-color, border;
+            transition-duration: 1.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.5s; */
+            transition: all 1.5s ease-in-out 0.5s;
+        }
+        .translate{
+            transform: translateX(20vw) translateY(20vh) scale(1.5);
+            background-color: pink;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+    <p> To use transition you need one more extra class/id where all transition-property is present. If any time this extra class/id is missing so it become's to his original property. Or if his property is missing so it change only those property into the previous state. </p>
+</body>
+</html>

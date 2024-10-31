@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Css Selector</title>
+    <style>
+        .boxes *{ /* it is apply in every element which is present inside of .boxes */
+            margin: 10px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+        .box::first-line{ /* it select first line of a paragraph */
+            color:red;
+        }
+        .box::first-letter{ /* it select only first letter of a paragraph */
+            color:black;
+            font-size: 25px;;
+        }
+        h1, p, .box{ /* groping between different selectors. Means it select all mentioned elements */
+            padding-top: 20px;
+            text-indent: 20px
+        }
+        #divBox:nth-child(even){ /* select those childs which is placed in even number of his body */
+            background-color: yellow;
+        }
+        #divBox:nth-last-child(1){ /* it search form last and select mentiond number of child */
+            background-color:chartreuse;
+        }
+        .boxes::before{ /* it dynamicaly insert the content and his property, on begining of this given selector */
+            content: "Hii, before class:boxes";
+            color:purple;
+        }
+        .boxes::after{ /* it dynamicaly insert the content and his property, on ending of this given selector */
+            content: "Byy, after class:boxes";
+            color:purple;
+        }
+        /*p*/::selection{ /* this property is apply when mentiond selector's content/text is select. is any selector is not mentioned so same thing is apply on every html content/text */
+            color: aqua;
+            background-color: black;
+        }
+        input::placeholder{ /* select placehoder of a input */
+            color:white;
+            font-size: 15px;
+            background-color: black;
+        }
+        [ MY-color="col1" ]{ /* attribute Selector */
+            color: yellow;
+            background-color:black;
+        }
+        [ My-color="col2" ]{
+            color: black;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div id="divBox">
+            <h1>[ it is box 1 ]</h1>
+            <p class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dicta, velit provident est expedita dignissimos deserunt, pariatur incidunt repellat soluta, animi inventore aspernatur amet accusamus architecto illum dolores quasi nesciunt quisquam alias sequi quia qui quam. Beatae, delectus totam iusto sapiente, modi adipisci minima fugit similique molestiae ea, quos ab.</p>
+        </div>
+        <div id="divBox">
+            <h1>[ it is box 2 ]</h1>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolor porro? Quis quam ex ipsum facilis saepe at vel, placeat dolor nisi iure! Magnam, quo! Iure cumque alias eligendi possimus! Totam nostrum labore ducimus, nulla animi neque sequi necessitatibus doloremque repudiandae, commodi consectetur exercitationem dolore veritatis natus, iure perferendis vero temporibus laboriosam iusto aliquid voluptas dolores quidem obcaecati! Sunt, officia!</p>
+        </div>
+        <div id="divBox">
+            <h1>[ it is box 3 ]</h1>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum labore hic alias. Rerum fugit facilis harum dolorem architecto eum pariatur, cumque commodi eaque quo accusantium tempora amet fugiat asperiores dolore ipsa laboriosam aspernatur quidem porro corporis. Facere dicta similique suscipit esse corrupti adipisci nesciunt est, temporibus iure accusamus praesentium sit, mollitia pariatur, aliquid aliquam odit amet deserunt ullam? Quod deleniti ab impedit tempore. Ullam non nobis blanditiis eius temporibus?</p>
+        </div>
+        <div id="divBox">
+            <h1>[ it is box 4 ]</h1>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque optio laboriosam accusamus magni inventore temporibus nobis id mollitia reiciendis quo, nostrum, harum non totam eligendi culpa expedita. Provident nostrum iste, rem assumenda praesentium blanditiis facilis unde eligendi consectetur natus explicabo illum voluptas aut perspiciatis a? Delectus vel placeat quo quaerat, est debitis suscipit architecto modi, odio animi, facilis alias eos illo? Assumenda nesciunt expedita magnam sint perspiciatis ex aperiam ab voluptatibus totam voluptatum architecto est adipisci nemo, recusandae sapiente at!</p>
+        </div>
+        <div id="divBox">
+            <h1>[ it is box 5 ]</h1>
+            <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime exercitationem nisi ratione recusandae, nemo magnam autem aspernatur voluptatum qui nostrum beatae dolores sequi omnis, obcaecati totam numquam quam harum neque vero, quasi maiores doloremque consequuntur? Totam numquam maxime fugit aliquid vero, placeat enim, quidem facilis, ratione magnam voluptate minus delectus qui exercitationem voluptatibus natus est architecto! Beatae dolore aliquid earum veniam odio illo cumque neque maiores quibusdam recusandae, animi, voluptatum et, quidem non tenetur! Omnis, repellendus quas nulla officia ipsa iste voluptates fugit non, laborum optio sunt distinctio perspiciatis corrupti.</p>
+        </div>
+    </div>
+    <label for="ip">Name : </label>
+    <input type="text" placeholder="Enter your name : " id="ip">
+
+    <div My-color="col1">i am a div with 'col1' value in 'My-color' veriable</div>
+    <div My-color="col2">i am a div with 'col2' value in 'My-color' veriable</div>
+</body>
+</html>

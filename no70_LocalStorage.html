@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <script>
+        if(localStorage.getItem("name")){ // if in localStorage "name" has any value so it return true. other wise it return false.
+            a = localStorage.getItem("name") // getItem is used to fetch the value of this curresponding variable form this localStorage
+            document.write("Welcome "+a)
+        }
+        else{
+            let a = prompt("Enter your name")
+            localStorage.setItem("name",a) // setItem is use to store some varible and his value in localStorage. "name" is a veriable in localStorage which we have created, And the value of a is store in this veriable.
+            document.write("Welcome "+a)
+        }
+
+        let b = {23: "Tanmoy", 39: "Sankha"}
+        localStorage.setItem("friend",JSON.stringify(b)) // JSON.stringify(x) is use to convert any value of x into a string.
+        console.log(localStorage.getItem("friend"));
+        console.log(JSON.parse(localStorage.getItem("friend"))); // JSON.parse(x) is use to convert any value of x into a object if it is possible
+        
+    </script>
+</body>
+</html>

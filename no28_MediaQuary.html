@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Quary in CSS</title>
+    <style>
+        body{
+            background-color:red;
+        }
+        .container{
+            display: flex;
+        }
+        .box{
+            margin: 10px;
+            padding: 10px;
+            width: 250px;
+            height: 250px;
+            background-color: purple;
+            border: 2px solid black;
+            display: flex;
+        }
+        @media only screen and (min-width: 400px){ /* 'max-width' is apply when screen width become heigher the given value . 'min-width' is apply whenscreen width become lower the given value. Same thing is apllicable height. */
+            body{
+                background-color: black;
+            }
+            .container{
+                display: block;
+            }
+        }
+        @media screen and (orientaion: landscape) { /* 'landscape' mean height is more than width. and 'portrait' mean width is more than height. */
+        }
+    </style>
+</head>
+<body>
+    <div>I am div-tag cintant</div>
+    <div class=container>
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        .brown{
+            color:brown !important;
+        }
+        h1{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        .yellow{
+            color: yellow;
+        }
+        .green{
+            color: green;
+        }
+        #purple{
+            color:purple
+        }
+        [data-x=o]{ /* Attribute Selector */
+            color: orange;
+        }
+        h1.chocolate{ /*now it's specificity = h1-specificity + chocolate-specificity. It is called complex specificity*/
+            color:chocolate;
+        }
+    </style>
+</head>
+<body>
+    <!-- the order of specificity is:
+        Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector -->
+        <h1 class="blue yellow green">Heading-1 for CSS Specificity</h1>
+        <h1 class="chocolate blue yellow green">Heading-2 for CSS Specificity(complex specificity)</h1>
+        <h1 class="brown blue yellow green">Heading for CSS !important. which have most higher priority to this selector</h1>
+    <h1 style="color:aqua" class="blue yellow green">Heading-2 for CSS Specificity</h1>
+    <h1 id="purple" class="blue yellow green">Heading-2 for CSS Specificity</h1>
+    <h1 data-x="o" class="blue yellow green">Heading-2 for CSS Specificity</h1>
+</body>
+</html>

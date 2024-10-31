@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Fit and Object-cover</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+        .subCon{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+        }
+        .con1{
+            background-color: #00ffad;
+        }
+        .con1 img{
+            height: 300px;
+            width: 300px;
+            object-fit: cover; /* object-fit: contain/cover/fill/fit/none; */
+            object-position: right; /* object-position: top/left/right/bottom/center */
+            /* object-position: bottom right; */
+            object-position: 10px 20px; /* ( give a 10px gap from left & 20px gap form top ) */
+        }
+        .con2{
+            background-image: url("https://images.unsplash.com/photo-1610845914026-80769f5d2dbd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-position: center center;/* center form top-bottom and center form left-right */
+            /* background-position: conter right; */
+        }
+        .con3{
+            background-image: url("/images/200px\ width\ and\ 150px\ height\ img.png");
+            background-repeat: no-repeat; /* background-repeat: no-repeat/repeat/repeat-x/repeat-y/round/space */
+            background-position: center center;
+        }
+        .con4{
+            border: 20px dashed aqua;
+            padding: 30px;
+            box-sizing: border-box;
+            background-image: url("https://img.freepik.com/free-photo/fresh-coffee-steams-wooden-table-close-up-generative-ai_188544-8923.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705536000&semt=sph");
+            background-clip: content-box; /*  background-clip: border-box/padding-box/content-box/text */
+            
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="subCon con1">
+            <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="photo">
+        </div>
+        <div class="subCon con2">
+        </div>
+        <div class="subCon con3">
+        </div>
+        <div class="subCon con4"> box-4 </div>
+    </div>
+</body>
+</html>

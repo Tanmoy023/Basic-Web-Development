@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Element : Event Bubbing, setInterval, setTimeout</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            Hii i am a box
+        </div>
+        <button id="btn">Click me</button>
+    </div>
+    <script>
+        console.log("Hellow world");
+        let b = document.querySelector("#btn");
+        // some mouse events are : click, dblclick, contextmenu(right click)
+        b.addEventListener("click", () => {
+            document.querySelector(".box").innerHTML = `I have changed by this <b>click me</b> button.`;
+        })
+        document.addEventListener("keydown", (e) => {
+            console.log(e.key, e.keyCode);
+        })
+    </script>
+</body>
+
+</html>

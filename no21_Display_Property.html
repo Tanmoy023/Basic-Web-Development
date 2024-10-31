@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Display Property</title>
+    <style>
+        .border{
+            border:2px solid black
+        }
+        #change_in_inline{
+            display: inline; /* it take only required width. but it dose't accept margin-top and padding-tap*/
+        }
+        #change_in_block{
+            display: block; /* it take full width */
+        }
+        #inline-block{
+            display: inline-block; /* now it act as a inline element and also take margin-top and padding-top*/
+            padding: 25px;
+            margin:30px;
+        }
+        #hidden{
+            padding: 25px;
+            margin:30px;
+            visibility: hidden; /* it just hide the content form page. but stil grab his space */
+        }
+        #none{
+            padding: 25px;
+            margin:30px;
+            display:none; /* it completly remove the content form page. and free his space */
+        }
+    </style>
+</head>
+<body>
+    <div class="border">It is a div-tag which is a block element</div>
+    <div class="border" id="change_in_inline">It is a div-tag which is now brcome a inline element</div>
+                                                    <br>
+    <span class="border">It is a span-tag</span><span class="border">which is a inline element</span>
+    <div class="border" id="change_in_block">It is a span-tag which is now brcome a block element</div>
+
+    <span class="border" id="inline-block">It is for showing display:inline-block</span>
+    <div class="border" id="hidden">It is for showing visibility:hidden</div>
+    <div class="border" id="none">It is for showing display:none</div>
+    <footer>The End</footer>
+</body>
+</html>

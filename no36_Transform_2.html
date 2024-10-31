@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform in Css</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            min-height: 100vh;
+            width: 100vw;
+        }
+        .container{
+            border: 2px solid purple;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 2.25vw;
+            column-gap: 0.25vh;
+            box-sizing: border-box;
+        }
+        .box{
+            height: 18vh;
+            width: 18vh;
+            border: 2px solid black;
+            background-color: aqua;
+            background-image: url(/images/Crishmas.jpg);
+        }
+        .rotate:hover{
+            transform: rotate(45deg); /* rotate from left to right */
+        }
+        .rotateX:hover{
+            transform: rotateX(45deg); /* rotate in x axis */
+        }
+        .rotateY:hover{
+            transform: rotateY(45deg); /* rotate in y axis */
+        }
+        .rotateZ:hover{
+            transform: rotateZ(45deg); /* rotate in z axis. also work similare to rotate */
+        }
+        .scale:hover{
+            transform: scale(1.4); /* streach in x and y axis */
+        }
+        .scaleX:hover{
+            transform: scaleX(1.4); /* streach in x axis */
+        }
+        .scaleY:hover{
+            transform: scaleY(1.4); /* streach in y axis */
+        }
+        .skew:hover{
+            transform: skew(45deg); /* streach from top-left-corner and bottom-right-corner in x axix */
+        }
+        .skewX:hover{
+            transform: skewX(45deg); /* streach from top-left-corner and bottom-right-corner in x axix.In this time only left and right side line will streach. */
+        }
+        .skewY:hover{
+            transform: skewY(45deg); /* streach from top-left-corner and bottom-right-corner in y axix. In this time only top and bottom side line will streach. */
+        }
+        .translateX:hover{
+            transform: translateX(20%); /* move 20% distance of his width in x axix */
+        }
+        .translateY:hover{
+            transform: translateY(20%); /* move 20% distance of his height in y axix */
+        }
+        .rotate-with-Origin:hover{
+            transform-origin: 0% 10%; /* form top-left to bottom-right its origin present in (0%,10%) of his body. only for rotate (--% --%) origin is valid. and rotateZ is also work similer with any origin  */
+            transform: rotate(45deg);
+        }
+        .rotateX-with-Origin:hover{
+            transform-origin: 50%; /* give his origin 50%. Mean form top-left to bottom-right its origin present in (50%,50%) of his body. for rotateX and rotateY (--% --%) origin is invalid. */
+            transform: rotateX(45deg);
+        }
+        .rotateY-with-Origin:hover{
+            transform-origin: 75%;
+            transform: rotateY(45deg);
+        }
+        .short-hand:hover{
+            transform: rotate(45deg) scale(0.5) skew(45deg) translate(20%); /* Sort hand for all transform proterty. */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box rotate">rotate</div>
+        <div class="box rotateX">rotateX</div>
+        <div class="box rotateY">rotateY</div>
+        <div class="box rotateZ">rotateZ</div>
+        <div class="box scale">scale</div>
+        <div class="box scaleX">scaleX</div>
+        <div class="box scaleY">scaleY</div>
+        <div class="box skew">skew</div>
+        <div class="box skewX">skewX</div>
+        <div class="box skewY">skewY</div>
+        <div class="box translateX">translateX</div>
+        <div class="box translateY">translateY</div>
+        <div class="box rotate-with-Origin">rotate-with-Origin</div>
+        <div class="box rotateX-with-Origin">rotateX-with-Origin</div>
+        <div class="box rotateY-with-Origin">rotateY-with-Origin</div>
+        <div class="box short-hand">short-hand</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async, Await</title>
+</head>
+
+<body>
+    Hii user
+    <script>
+        async function weather() {
+            let delhiWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("27deg C")
+                    console.log("27deg C"); // just for showing in console directly
+                }, 1500)
+            })
+            let puneweather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("20deg C")
+                    console.log("20deg C"); // just for showing in console directly
+                }, 3000)
+            })
+            let delhiTemp = await delhiWeather // you can store this Promise in a veriable
+            let puneTemp = await puneweather
+            return [delhiTemp, puneTemp]
+        }
+        console.log("Welcome to wether report");
+        let w = weather(); // just for it return a Promise you need to store in veriable 
+        console.log(w);
+
+    </script>
+</body>
+
+</html>

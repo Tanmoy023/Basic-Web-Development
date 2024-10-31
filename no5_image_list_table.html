@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image list table</title>
+    <style>
+        th {
+            border: 2px solid yellow
+        }
+
+        td {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/goku atonomas ultra instint.jpg" alt="goku">
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/35/Beerus_Battle_of_Gods.jpg" alt="Beerus">
+    <table>
+        <thead>
+            <tr>
+                <caption>Student details</caption>
+                <th>Name</th> <!-- th stand for table heading -->
+                <th>Roll no.</th>
+                <th>college</th>
+                <th>university</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tanmoy Patra</td> <!-- td stand for table data -->
+                <td>CSE/21/023</td>
+                <td>CEMK</td>
+                <td>MAKAUT</td>
+            </tr>
+            <tr>
+                <td>sankhadeep gayan</td>
+                <td rowspan="2">CSE/21/039 & 089</td> <!-- grab two verticle row -->
+                <td colspan="2">CEMK under MAKAUT</td> <!-- grap two horizontal column -->
+            </tr>
+            <tr>
+                <td>Rahul karmakar</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td rowspan="3">other student's</td> <!-- rowspan is work when more rows are present after that -->
+                <td >CSE/21/1 to 200</td>
+                <td colspan="2">CEMK under MAKAUT</td>
+            </tr>
+        </tfood>
+    </table>
+    <ul type="square"> <!-- ul stand for un-order list --> <!-- there three type of ul : disk(by default), square & circle -->
+        <li>Tanmoy Patra</li> 
+        <li>Subhajit das</li>
+        <li>Milan gantait</li>
+    </ul>
+    <ol type="i"> <!-- ol stand for order list --> <!-- there five type of ul : 1(by default), I, i, a & A -->
+        <li>Tanmoy Patra</li>
+        <li>Subhajit das</li>
+        <li>Milan gantait</li>
+    </ol>
+    <dl> <!-- dl stand for defination list -->
+        <dt>Term-1</dt> <!-- dt stand for defination term -->
+        <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, quidem!</dd> <!-- dd stand for defination data -->
+        <dt>Term-2</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dolores, iusto quod illo dolorem natus.</dd>
+        <dt>Term-3</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa unde voluptatum assumenda veritatis eaque laudantium omnis itaque sed blanditiis accusantium?</dd>
+    </dl>
+</body>
+
+</html>
