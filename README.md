@@ -18,4 +18,4 @@ Welcome to the Basic Web Development repository! This repository is designed to 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/Basic-Web-Development.git
+   git clone https://github.com/Tanmoy023/Basic-Web-Development.git
